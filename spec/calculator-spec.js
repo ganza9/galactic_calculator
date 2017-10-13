@@ -7,4 +7,38 @@ describe('CalculatorTests', function() {
     expect(calculator.ageInSeconds(18)).toEqual(568025136);
 
   });
+
+  // it('should calculate the seconds between two dates', function() {
+  //   let calculator = new Calculator();
+  //   let a = [2017, 10, 12];
+  //   let b = [2007, 10, 13];
+  //   expect(calculator.secondsBetweenDates(a,b)).toEqual(86400);
+  //
+  // });
+
+  it('should calculate the age of someone into Mercurian years', function() {
+    let calculator = new Calculator();
+    expect(calculator.ageInYearsOnMercury(18)).toEqual(75);
+
+  });
+
+  it('should calculate the age of someone into Venusian years', function() {
+   let calculator = new Calculator();
+   expect(calculator.ageInYearsOnVenus(18)).toEqual(29);
+
+  });
+
+
+  it('should calculate the age of someone into Martian years', function() {
+    let calculator = new Calculator();
+    expect(calculator.ageInYearsOnMars(18)).toEqual(9);
+
+  });
+
+  it('should calculate the age of someone into Jovian years', function() {
+    let calculator = new Calculator();
+    expect(calculator.ageInYearsOnJupiter(18)).toEqual(1);
+
+  });
+
 });
