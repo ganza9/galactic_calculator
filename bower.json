@@ -18,5 +18,8 @@
   },
   "authors": [
     "Rafael Furry <rfurry@gmail.com>"
-  ]
+  ],
+  "devDependencies": {
+    "moment": "^2.19.1"
+  }
 }
