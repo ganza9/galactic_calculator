@@ -8,13 +8,13 @@ describe('CalculatorTests', function() {
 
   });
 
-  // it('should calculate the seconds between two dates', function() {
-  //   let calculator = new Calculator();
-  //   let a = [2017, 10, 12];
-  //   let b = [2007, 10, 13];
-  //   expect(calculator.secondsBetweenDates(a,b)).toEqual(86400);
-  //
-  // });
+  it('should calculate the seconds between two dates', function() {
+    let calculator = new Calculator();
+    let a = [2017, 10, 12];
+    let b = [2007, 10, 13];
+    expect(calculator.secondsBetweenDates(a,b)).toEqual(86400);
+
+  });
 
   it('should calculate the age of someone into Mercurian years', function() {
     let calculator = new Calculator();
@@ -38,6 +38,26 @@ describe('CalculatorTests', function() {
   it('should calculate the age of someone into Jovian years', function() {
     let calculator = new Calculator();
     expect(calculator.ageInYearsOnJupiter(18)).toEqual(1);
+
+  });
+
+  it('should calculate how long someone has left to live in each planet based on location and sex', function() {
+    let calculator = new Calculator();
+    let age = 18;
+    let sex = "male";
+    let continent = "North America";
+    let planet = "Mercury";
+    expect(calculator.lifeExpectancyOnPlanet(age,sex,continent,planet)).toEqual(245 + " more years on " + planet);
+
+  });
+
+  it('should notify the user if their age is over the estimated life expectancy', function() {
+    let calculator = new Calculator();
+    let age = 100;
+    let sex = "female";
+    let continent = "Asia";
+    let planet = "Jupiter";
+    expect(calculator.lifeExpectancyOnPlanet(age,sex,continent,planet)).toEqual("Your age is past expectancy.");
 
   });
 
